@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACTO</title>
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- fuentes de letras -->
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- hereda de index -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/244f112946.js" crossorigin="anonymous"></script>
+
+    <!-- conexion a css -->
+    <link rel="stylesheet" href="css/estilosContacto.css">
+</head>
+
+
+
+<body>
+
+
+    <!-- CABECERA -->
+   <header>
+        <nav> <!-- Inicio del nav -->
+            <section class="contenedor navegador">
+                <!-- logo de claro -->
+                <div class="logo">
+                    <a href="index.html"> <img src="img/escColon.png" alt="escudo de colon"> </a>
+                </div>
+
+                <!-- menu de navegacion -->
+                <ul class="enlaces-header">
+                <li> <a href="index.html"> <span class="home"> <i class="fas fa-home icon"></i> </span> Home </a> </li>
+                <li class="elim"> <a href="#"> <span class="nosotros"> <i class="fas fa-address-card icon"></i> </span> Nosotros </a> </li>
+                <li class="elim"> <a href="#"> <span class="galeria"> <i class="fas fa-camera icon"></i> </span> Galería </a> </li>
+                <li> <a href="#"> <span class="novedades"> <i class="fas fa-bell icon"></i> </span> Novedades </a> </li>
+                <li> <a href="contacto.html"> <span class="contacto"> <i class="fas fa-envelope icon"></i> </span> Contacto </a> </li> 
+                </ul>
+            </section>
+        </nav> <!-- Fin del nav -->
+   </header>  <!-- Fin de cabecera -->
+
+
+
+
+    <main class="contenedorContacto sombra"> <!-- inicio contenedor -->
+        <section> <!-- inicio de seccion -->
+
+               <form class="formulario"> 
+                   <fieldset>
+                    <legend>Contáctanos llenando todos los campos</legend>
+        
+                    <div class="contenedor-campos">
+                          <div class="campo">
+                            <label>Nombre</label>
+                            <input class="input-textarea" type="text" placeholder="tu nombre">
+                          </div>
+        
+                          <div class="campo">
+                            <label>Teléfono</label>
+                            <input class="input-textarea" type="tel" placeholder="tu teléfono">
+                          </div>
+        
+                          <div class="campo">
+                            <label>Correo</label>
+                            <input class="input-textarea" type="email" placeholder="tu email">
+                          </div>
+        
+                          <div class="campo">
+                            <label>Mensaje</label>
+                            <textarea class="input-textarea"></textarea>
+                          </div> 
+                    </div> <!-- .contenedor-campos -->
+        
+                    <div>
+                         <input class="botonContacto input-textarea" type="submit" value="Enviar">
+                     </div>
+                 </fieldset>
+             </form>
+
+        </section> <!-- fin de seccion -->
+    </main> <!-- fin contenedor -->
+        
+        
+    <footer class="footer">
+        <p>Todos los derechos reservados. David Leonel &copy; - Freelancer</p>
+    </footer>
+
+    
+</body>
+</html>
