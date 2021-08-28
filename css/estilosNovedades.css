@@ -1,0 +1,290 @@
+
+/* pseudoelemento */
+:root {
+    --blanco: #fff;
+    --gris: #3f485b;
+    --grisClaro: #ccc;
+    --grisOscuro: #2d323d;
+    --amarillo: #f2c640;
+    --fondo: #f2f2f2;
+    /* de formulario */
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    
+    /* para el menu de navegación */
+    --home: #0e5061;
+    --nosotros: #5da5a2;
+    --galeria: #f25724;
+    --novedades: #174459;
+    --contacto: #37a4d9;
+    /* tamaño standar navegador */
+    --nav: 8rem;
+    /* botones */
+    --boton: #0062cc;
+} 
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }  
+
+body {
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+/**** *** **   ESTILOS HEADER   ** *** ****/
+.contenedor {
+    width: 90%;
+    max-width: 1024px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    display: block;
+    margin-bottom: var(--nav);
+}
+
+nav {
+   width: 100%;
+   height: var(--nav);
+   background-color: white;
+   border-bottom: 1px solid transparent;
+   box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, .3);
+   /* un navegador fixed para que esté siempre en la página */
+   position: fixed;
+   top: 0px;
+   z-index: 100;
+}
+
+.navegador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--nav);
+    width: 100%;
+}
+
+.navegador .logo {
+    height: var(--nav);
+}
+
+.navegador .logo img {
+    height: 100%;
+    vertical-align: top;
+}
+
+
+/* estilos para el navegador */
+.navegador .enlaces-header {
+    list-style: none;
+    overflow: hidden;
+    width: 90%;
+    height: 100%;
+    position: relative;
+    /* display: flex;
+    justify-content: space-evenly; */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.enlaces-header li a {
+   text-decoration: none;
+   color: var(--gris);
+   font-weight: 700;
+   display: block;
+   line-height: 40px;
+   padding: 20px;
+   height: 100%;
+   /* para el menú desplegable */
+   position: relative;
+   text-align: center;
+}
+
+.enlaces-header li a span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    top: -95%;
+    /* código generado con página: */
+    /* https://css3generator.com/ */
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+     transition: all .3s ease;
+}
+
+.enlaces-header li a span .icon {
+    display: block;
+    line-height: 70px;
+    color: var(--blanco);
+    font-size: 28px;
+}
+
+/* efecto del navegador */
+.enlaces-header li a:hover > span {
+    top: 0;
+}
+
+.home {
+    background-color: var(--home);
+}
+
+.nosotros {
+    background-color: var(--nosotros);
+}
+
+.galeria {
+    background-color: var(--galeria);
+}
+
+.novedades {
+    background-color: var(--novedades);
+}
+
+.contacto {
+    background-color: var(--contacto);
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 586px) {
+    .elim {
+        display: none;
+    }
+
+    .navegador .enlaces-header {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .novedades {
+        background-color: var(--galeria);
+    }
+}
+
+
+
+
+
+
+
+
+
+/**   ESTILOS SECCION DE NOVEDADES  **/
+
+.contenedorNovedades {
+    background-color: var(--fondo);
+    max-width: 1200px;
+    margin: 1rem auto;
+    margin-top: 10rem;
+}
+
+.imgEst {
+    object-fit: cover;
+    max-width: 100%;
+}
+
+h2 {
+    flex: 0 1 100%;
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Krub', sans-serif;
+    color: var(--gris);
+    margin: 2rem;
+    padding-top: 2rem;
+}
+
+h3 {
+    font-family: 'LibreBaskerville', sans-serif;
+    margin: 1rem;
+    font-weight: 700;
+}
+
+
+
+.contenido-principal {
+    margin: 1rem auto;
+}    
+
+
+.padre {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contenido {
+    background-color: var(--blanco);
+    text-align: center;
+    padding: 3rem;
+    text-transform: uppercase;
+    width: 350px;
+    height: 350px;
+    margin: 2rem;
+    border-radius: 2rem;
+}
+
+.contenido span {
+    color: var(--secundario);
+}
+
+.contenido > h3 {
+    font-size: .9rem;
+    line-height: 1.4rem;
+}
+
+
+/* para boton */
+.botonNovedades {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: .8rem 2rem;
+    margin-top: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: .5rem;
+}
+
+
+.botonNovedades:hover {
+    transform: translateY(-3px) scale(1);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, .4);
+    background-color: #01b0c4;
+    cursor: pointer;
+}
+
+
+
+/* footer */
+.footer {
+    text-align: center;
+}
+
+.footer > p {
+    margin-bottom: 1rem;
+}
+

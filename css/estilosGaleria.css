@@ -1,0 +1,418 @@
+
+
+
+
+/* pseudoelemento */
+:root {
+    --blanco: #fff;
+    --gris: #3f485b;
+    --grisClaro: #ccc;
+    --grisOscuro: #2d323d;
+    --amarillo: #f2c640;
+    --fondo: #f2f2f2;
+    /* de formulario */
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    
+    /* para el menu de navegación */
+    --home: #0e5061;
+    --nosotros: #5da5a2;
+    --galeria: #f25724;
+    --novedades: #174459;
+    --contacto: #37a4d9;
+    /* tamaño standar navegador */
+    --nav: 8rem;
+    /* botones */
+    --boton: #0062cc;
+} 
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }  
+
+body {
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    color: #1d273b;
+    font-weight: 300;
+}
+
+
+
+/**** *** **   ESTILOS HEADER   ** *** ****/
+.contenedor {
+    width: 90%;
+    max-width: 1024px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    display: block;
+    margin-bottom: var(--nav);
+}
+
+nav {
+   width: 100%;
+   height: var(--nav);
+   background-color: white;
+   border-bottom: 1px solid transparent;
+   box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, .3);
+   /* un navegador fixed para que esté siempre en la página */
+   position: fixed;
+   top: 0px;
+   z-index: 100;
+}
+
+.navegador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--nav);
+    width: 100%;
+}
+
+.navegador .logo {
+    height: var(--nav);
+}
+
+.navegador .logo img {
+    height: 100%;
+    vertical-align: top;
+}
+
+
+/* estilos para el navegador */
+.navegador .enlaces-header {
+    list-style: none;
+    overflow: hidden;
+    width: 90%;
+    height: 100%;
+    position: relative;
+    /* display: flex;
+    justify-content: space-evenly; */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.enlaces-header li a {
+   text-decoration: none;
+   color: var(--gris);
+   font-weight: 700;
+   display: block;
+   line-height: 40px;
+   padding: 20px;
+   height: 100%;
+   /* para el menú desplegable */
+   position: relative;
+   text-align: center;
+}
+
+.enlaces-header li a span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    top: -95%;
+    /* código generado con página: */
+    /* https://css3generator.com/ */
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+     transition: all .3s ease;
+}
+
+.enlaces-header li a span .icon {
+    display: block;
+    line-height: 70px;
+    color: var(--blanco);
+    font-size: 28px;
+}
+
+/* efecto del navegador */
+.enlaces-header li a:hover > span {
+    top: 0;
+}
+
+.home {
+    background-color: var(--home);
+}
+
+.nosotros {
+    background-color: var(--nosotros);
+}
+
+.galeria {
+    background-color: var(--galeria);
+}
+
+.novedades {
+    background-color: var(--novedades);
+}
+
+.contacto {
+    background-color: var(--contacto);
+}
+
+
+/* MEDIA QUERIE DE NAVEGADOR */
+@media screen and (max-width: 586px) {
+    .elim {
+        display: none;
+    }
+
+    .navegador .enlaces-header {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .novedades {
+        background-color: var(--galeria);
+    }
+}
+
+
+
+
+
+
+/*******  ESTILOS DE GALERIA  ********/
+.fondo {
+    width: 100%;
+    background-color: var(--fondo);
+    margin: 0px auto;
+    padding: 1rem;
+}
+
+.contenedorGaleria {
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 1rem;
+    margin: 1rem auto;
+    /* gradiente de fondo echo en página: */
+    /* https://www.cssmatic.com */
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );
+    
+    /* opacidad */
+    -webkit-box-shadow: 2px 2px 15px 0px rgba(74,74,74,0.44);
+    -moz-box-shadow: 2px 2px 15px 0px rgba(74,74,74,0.44);
+    box-shadow: 2px 2px 15px 0px rgba(74,74,74,0.44);
+}
+
+.titulo {
+    font-size: 200%;
+    border-bottom: 5px solid var(--amarillo);
+    padding-bottom: 7px;
+    padding-top: 3rem;
+    margin: 1.50rem auto;
+    width: 40%;
+    text-align: center;
+}
+
+/* para contenedor padre */
+.cajaPadre {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 3rem;
+    width: 92%;
+    margin: 5rem auto 2rem auto;    
+}
+
+
+.cajaHija {
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 1.6rem;
+    transition: 0.5s;
+}
+
+.cajaHija > img {
+    width: 250px;
+    height: 250px;
+    border-radius: 1.6rem;
+    opacity: 0.6;
+    object-fit: cover;
+}
+
+.cajaHija > img:hover {
+    border: 1px solid rgb(134, 222, 116);
+    -webkit-box-shadow: 2px 2px 15px -4px rgba(134, 222, 116,0.64);
+    -moz-box-shadow: 2px 2px 15px -4px rgba(134, 222, 116,0.64);
+    box-shadow: 2px 2px 15px -4px rgba(134, 222, 116,0.64);
+    opacity: 1;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+
+
+/* footer */
+.footer {
+    text-align: center;
+}
+
+.footer > p {
+    margin-bottom: 1rem;
+}
+
+
+
+/* MEDIA QUERIES */
+
+/* para 1300 */
+@media screen and (max-width: 1300px) {
+    .cajaPadre {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+}
+
+/* para 986 */
+@media screen and (max-width: 986px) {
+    .cajaHija > img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* para 814 */
+@media screen and (max-width: 814px) {
+    .cajaPadre {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .cajaHija > img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* para 776 */
+@media screen and (max-width: 776px) {
+    .cajaPadre {
+        margin-left: 5rem;
+    }
+    
+    .cajaHija > img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* para 656 */
+@media screen and (max-width: 656px) {
+    .cajaHija > img {
+        width: 215px;
+        height: 215px;
+    }
+}
+
+/* para 568 */
+@media screen and (max-width: 588px) {
+    .elim {
+        display: none;
+    }
+
+    .navegador .enlaces-header {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .novedades {
+        background-color: var(--galeria);
+    }
+
+    .titulo {
+        font-size: 280%;
+        width: 90%;
+    }
+
+
+    .cajaPadre {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        margin: auto;
+    }
+
+    .cajaHija > img {
+        width: 300px;
+        height: 300px;
+        margin-left: 7rem;
+    }
+}
+
+
+/* para 530 */
+@media screen and (max-width: 530px) {
+    .titulo {
+        font-size: 200%;
+        width: 90%;
+    }
+
+    .cajaHija > img {
+        width: 300px;
+        height: 300px;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+}
+
+
+/* para 470 */
+@media screen and (max-width: 470px) {
+    .cajaHija > img {
+        width: 310px;
+        height: 310px;
+        margin-left: 2rem;
+    }
+}
+
+
+/* para 428 */
+@media screen and (max-width: 428px) {
+    .cajaHija > img {
+        width: 280px;
+        height: 280px;
+        margin-left: 2rem;
+        opacity: 1;
+    }
+}
+
+/* para 390 */
+@media screen and (max-width: 390px) {
+    .cajaHija > img {
+        width: 250px;
+        height: 250px;
+        margin-left: 1.5rem;
+    }
+}
